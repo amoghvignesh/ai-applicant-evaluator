@@ -278,6 +278,20 @@ The evaluator scores candidates across four parameters:
 
 The final decision is based on both weighted score and confidence. The system uses a minimum weighted score of **3.5/5** and a minimum confidence threshold of **60%** to advance a candidate. This helps avoid over-advancing candidates when the signal is weak, incomplete, or inconsistent.
 
+## What I’d improve with more time
+
+- **Dynamic evaluation control layer**  
+  Move scoring weights, thresholds, and prompts out of code into a configurable interface so recruiters can tune evaluation criteria in real time without redeploying.
+
+- **Better handling of edge cases**  
+  Improve robustness for non-standard resumes (Word docs, scanned PDFs), missing GitHub data, and low-content portfolios.
+
+- **Feedback loop + calibration**  
+  Introduce a system to compare AI decisions with recruiter decisions over time and recalibrate thresholds and weights accordingly.
+
+- **Bias detection and mitigation**  
+  Audit and reduce bias across signals (e.g., over-weighting GitHub or polished portfolios) by normalizing inputs, introducing alternative signals, and continuously evaluating outcomes across candidate segments.
+
 ## Test cases
 
 1. **Strong builder, complete application** — evaluated end-to-end and PASSed.
