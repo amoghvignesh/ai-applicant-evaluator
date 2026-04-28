@@ -267,6 +267,17 @@ The agent polls the inbox every minute, evaluates the application, and replies w
 
 ---
 
+## Evaluation Framework
+
+The evaluator scores candidates across four parameters:
+
+- **Shipped Production Products (35%)** - evidence of building and launching real products or systems  
+- **Business Thinking (30%)** - ability to understand users, trade-offs, and product impact  
+- **Technical Depth (25%)** - strength of technical execution based on resume, GitHub, and projects  
+- **Speed of Execution (10%)** - signals of iteration speed, recent activity, and ability to ship quickly
+
+The final decision is based on both weighted score and confidence. The system uses a minimum weighted score of **3.5/5** and a minimum confidence threshold of **60%** to advance a candidate. This helps avoid over-advancing candidates when the signal is weak, incomplete, or inconsistent.
+
 ## Test cases
 
 1. **Strong builder, complete application** — evaluated end-to-end and PASSed.
